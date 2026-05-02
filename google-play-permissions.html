@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Déclaration des permissions sensibles - Transfert Données Téléphone</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px;
+      color: #222;
+      background: #ffffff;
+    }
+
+    h1, h2 {
+      color: #1f2937;
+    }
+
+    h1 {
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 12px;
+    }
+
+    .box {
+      background: #f3f4f6;
+      border-left: 4px solid #4f46e5;
+      padding: 12px 16px;
+      margin: 16px 0;
+    }
+
+    .warning {
+      background: #fff7ed;
+      border-left: 4px solid #f97316;
+      padding: 12px 16px;
+      margin: 16px 0;
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    a {
+      color: #2563eb;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #e5e7eb;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Déclaration des permissions sensibles</h1>
+
+  <p><strong>Application :</strong> Transfert Données Téléphone</p>
+  <p><strong>Marque développeur :</strong> Neova Labs</p>
+  <p><strong>Éditeur :</strong> SASU AMINE TELECOM</p>
+  <p><strong>SIREN :</strong> 810 367 110</p>
+  <p><strong>SIRET :</strong> 810 367 110 00014</p>
+  <p><strong>Adresse :</strong> 89B Grande Rue, 59100 Roubaix, France</p>
+  <p><strong>Contact :</strong> dadamine86@gmail.com</p>
+  <p><strong>Dernière mise à jour :</strong> 02 mai 2026</p>
+
+  <div class="box">
+    <p>
+      Cette page présente le contexte d’utilisation des permissions sensibles pouvant être demandées
+      par l’application Transfert Données Téléphone, notamment pour les modules de migration SMS
+      et historique d’appels lorsqu’ils sont disponibles.
+    </p>
+  </div>
+
+  <h2>1. Objectif principal de l’application</h2>
+
+  <p>
+    Transfert Données Téléphone est une application de migration de données entre deux appareils Android.
+    Son objectif est d’aider l’utilisateur à transférer ses données accessibles depuis un ancien appareil
+    Android vers un nouvel appareil Android.
+  </p>
+
+  <p>
+    Les transferts sont conçus pour être effectués localement entre les appareils de l’utilisateur,
+    sans serveur externe de Neova Labs ou de SASU AMINE TELECOM destiné à recevoir les données transférées.
+  </p>
+
+  <h2>2. Principe de minimisation des permissions</h2>
+
+  <p>
+    L’application doit demander uniquement les permissions nécessaires au module utilisé par l’utilisateur.
+    Les permissions sensibles ne doivent pas être demandées au démarrage si l’utilisateur n’a pas choisi
+    la fonctionnalité concernée.
+  </p>
+
+  <p>
+    Si l’utilisateur refuse une permission, le module concerné doit être ignoré ou limité, sans bloquer
+    les autres catégories de transfert.
+  </p>
+
+  <h2>3. Permission READ_SMS</h2>
+
+  <p>
+    Si le module SMS est disponible et activé, la permission READ_SMS peut être demandée sur l’ancien appareil
+    afin de lire les SMS existants et de les préparer pour le transfert vers le nouvel appareil.
+  </p>
+
+  <ul>
+    <li>Utilisation : lecture des SMS existants pour migration ;</li>
+    <li>Déclenchement : uniquement après action explicite de l’utilisateur ;</li>
+    <li>Destination : transfert local chiffré vers le nouvel appareil ;</li>
+    <li>Publicité : le contenu des SMS n’est pas utilisé pour la publicité ;</li>
+    <li>Serveur externe : les SMS ne sont pas envoyés vers un serveur de Neova Labs / SASU AMINE TELECOM.</li>
+  </ul>
+
+  <h2>4. Restauration des SMS</h2>
+
+  <p>
+    Pour restaurer des SMS sur le nouvel appareil, Android peut exiger que l’application devienne temporairement
+    l’application SMS par défaut.
+  </p>
+
+  <p>
+    Dans ce cas, l’utilisateur doit recevoir une explication claire avant toute demande de changement d’application
+    SMS par défaut. Après la restauration, l’application doit guider l’utilisateur pour remettre son application
+    SMS habituelle.
+  </p>
+
+  <div class="warning">
+    <p>
+      La permission WRITE_SMS ne doit pas être ajoutée sans justification technique actuelle.
+      L’écriture des SMS restaurés dépend principalement du rôle d’application SMS par défaut exigé par Android.
+    </p>
+  </div>
+
+  <h2>5. MMS</h2>
+
+  <p>
+    Les MMS sont plus complexes que les SMS, car ils peuvent contenir des pièces jointes, des données opérateur,
+    des formats spécifiques et des éléments dépendants de l’appareil ou de l’opérateur.
+  </p>
+
+  <p>
+    Si le transfert MMS n’est pas pris en charge dans une version de l’application, cela doit être indiqué
+    clairement à l’utilisateur dans l’application et dans les informations de publication.
+  </p>
+
+  <h2>6. Permission READ_CALL_LOG</h2>
+
+  <p>
+    Si le module d’historique d’appels est disponible et activé, la permission READ_CALL_LOG peut être demandée
+    afin de lire l’historique d’appels de l’ancien appareil pour le transférer vers le nouvel appareil.
+  </p>
+
+  <ul>
+    <li>Utilisation : lecture de l’historique d’appels pour migration ;</li>
+    <li>Données concernées : numéro, date, durée, type d’appel et informations disponibles selon Android ;</li>
+    <li>Déclenchement : uniquement après action explicite de l’utilisateur ;</li>
+    <li>Publicité : l’historique d’appels n’est pas utilisé pour cibler les publicités ;</li>
+    <li>Serveur externe : l’historique d’appels n’est pas envoyé vers un serveur de Neova Labs / SASU AMINE TELECOM.</li>
+  </ul>
+
+  <h2>7. Restauration native du journal d’appels</h2>
+
+  <p>
+    La restauration native du journal d’appels dans l’application Téléphone Android peut être limitée par les règles
+    Android et Google Play.
+  </p>
+
+  <p>
+    Selon les restrictions applicables, l’application peut choisir d’afficher l’historique d’appels transféré dans
+    une section locale de l’application plutôt que de l’insérer dans l’application Téléphone native.
+  </p>
+
+  <p>
+    Si une restauration native nécessite que l’application devienne temporairement l’application Téléphone par défaut,
+    l’utilisateur doit être informé clairement avant toute demande. L’application ne doit pas passer d’appel
+    automatiquement ni intercepter volontairement les communications de l’utilisateur.
+  </p>
+
+  <h2>8. Données sensibles et publicités</h2>
+
+  <p>
+    Les données sensibles traitées pour la migration, comme les SMS, le journal d’appels, les contacts ou les calendriers,
+    ne doivent pas être transmises à Google AdMob par le code de l’application.
+  </p>
+
+  <p>
+    Les publicités peuvent utiliser des données publicitaires techniques selon les règles Google et le consentement
+    de l’utilisateur, mais les données transférées ne doivent pas être utilisées pour cibler les publicités.
+  </p>
+
+  <h2>9. Écrans sans publicité</h2>
+
+  <p>
+    Aucune publicité ne doit être affichée pendant les étapes sensibles liées aux permissions ou au transfert.
+  </p>
+
+  <ul>
+    <li>Écrans de demande de permissions ;</li>
+    <li>Écrans liés aux SMS ;</li>
+    <li>Écrans liés au journal d’appels ;</li>
+    <li>Écrans de changement temporaire d’application SMS ou Téléphone par défaut ;</li>
+    <li>Scan ou génération QR ;</li>
+    <li>Connexion entre appareils ;</li>
+    <li>Transfert en cours ;</li>
+    <li>Restauration de données ;</li>
+    <li>Rapports contenant des informations sensibles détaillées.</li>
+  </ul>
+
+  <h2>10. Consentement utilisateur</h2>
+
+  <p>
+    Avant toute permission sensible, l’application doit expliquer :
+  </p>
+
+  <ul>
+    <li>pourquoi la permission est nécessaire ;</li>
+    <li>quelle donnée est lue ou restaurée ;</li>
+    <li>que le transfert reste local entre les appareils ;</li>
+    <li>que les données ne sont pas utilisées pour la publicité ;</li>
+    <li>que l’utilisateur peut refuser et continuer sans le module concerné.</li>
+  </ul>
+
+  <h2>11. Déclaration Play Console</h2>
+
+  <p>
+    Si les permissions SMS ou journal d’appels sont présentes dans le manifeste de l’application, elles doivent
+    être déclarées dans Google Play Console selon les règles applicables.
+  </p>
+
+  <p>
+    Le cas d’usage à présenter est la migration de données entre appareils appartenant à l’utilisateur.
+    La déclaration doit expliquer que les données sont utilisées uniquement pour le transfert demandé par l’utilisateur.
+  </p>
+
+  <h2>12. Plan de retrait si nécessaire</h2>
+
+  <p>
+    Si une permission sensible n’est pas acceptée par Google Play ou si un module ne peut pas être justifié,
+    le module concerné doit pouvoir être désactivé sans casser le reste de l’application.
+  </p>
+
+  <ul>
+    <li>Module SMS désactivable indépendamment ;</li>
+    <li>Module journal d’appels désactivable indépendamment ;</li>
+    <li>Suppression des permissions correspondantes dans le manifeste si nécessaire ;</li>
+    <li>Maintien des autres modules : contacts, médias, fichiers, audio, calendrier et transfert local.</li>
+  </ul>
+
+  <h2>13. Liens utiles</h2>
+
+  <ul>
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="privacy-policy.html">Politique de confidentialité</a></li>
+    <li><a href="terms.html">Conditions d’utilisation</a></li>
+    <li><a href="support.html">Support</a></li>
+    <li><a href="data-safety.html">Sécurité des données</a></li>
+    <li><a href="data-deletion.html">Suppression des données</a></li>
+    <li><a href="legal-notice.html">Mentions légales</a></li>
+    <li><a href="android-permissions.html">Permissions Android</a></li>
+    <li><a href="advertising.html">Publicités et consentement</a></li>
+    <li><a href="app-ads.txt">Fichier app-ads.txt</a></li>
+  </ul>
+
+  <h2>14. Contact</h2>
+
+  <p><strong>Neova Labs / SASU AMINE TELECOM</strong></p>
+  <p><strong>Adresse :</strong> 89B Grande Rue, 59100 Roubaix, France</p>
+  <p><strong>SIREN :</strong> 810 367 110</p>
+  <p><strong>SIRET :</strong> 810 367 110 00014</p>
+  <p><strong>E-mail :</strong> <a href="mailto:dadamine86@gmail.com">dadamine86@gmail.com</a></p>
+
+  <footer>
+    <p>© 2026 Neova Labs / SASU AMINE TELECOM — Transfert Données Téléphone.</p>
+  </footer>
+
+</body>
+</html>
