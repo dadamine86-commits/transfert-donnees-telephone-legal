@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMS et journal d’appels - Transfert Données Téléphone</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px;
+      color: #222;
+      background: #ffffff;
+    }
+
+    h1, h2 {
+      color: #1f2937;
+    }
+
+    h1 {
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 12px;
+    }
+
+    .box {
+      background: #f3f4f6;
+      border-left: 4px solid #4f46e5;
+      padding: 12px 16px;
+      margin: 16px 0;
+    }
+
+    .warning {
+      background: #fff7ed;
+      border-left: 4px solid #f97316;
+      padding: 12px 16px;
+      margin: 16px 0;
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    a {
+      color: #2563eb;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #e5e7eb;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>SMS et journal d’appels</h1>
+
+  <p><strong>Application :</strong> Transfert Données Téléphone</p>
+  <p><strong>Marque développeur :</strong> Neova Labs</p>
+  <p><strong>Éditeur :</strong> SASU AMINE TELECOM</p>
+  <p><strong>SIREN :</strong> 810 367 110</p>
+  <p><strong>SIRET :</strong> 810 367 110 00014</p>
+  <p><strong>Adresse :</strong> 89B Grande Rue, 59100 Roubaix, France</p>
+  <p><strong>Contact :</strong> dadamine86@gmail.com</p>
+  <p><strong>Dernière mise à jour :</strong> 02 mai 2026</p>
+
+  <div class="box">
+    <p>
+      Cette page explique le fonctionnement prévu des modules SMS et journal d’appels dans l’application
+      Transfert Données Téléphone. Ces modules sont sensibles et sont utilisés uniquement pour permettre
+      la migration des données de l’utilisateur entre ses propres appareils Android.
+    </p>
+  </div>
+
+  <h2>1. Objectif du module SMS</h2>
+
+  <p>
+    Le module SMS, lorsqu’il est disponible, sert uniquement à transférer les SMS existants de l’ancien appareil
+    Android vers le nouvel appareil Android de l’utilisateur.
+  </p>
+
+  <ul>
+    <li>Les SMS sont lus uniquement après action explicite de l’utilisateur.</li>
+    <li>Les SMS sont transférés localement entre les deux appareils.</li>
+    <li>Les SMS ne sont pas envoyés vers un serveur de Neova Labs / SASU AMINE TELECOM.</li>
+    <li>Les SMS ne sont pas utilisés pour la publicité.</li>
+  </ul>
+
+  <h2>2. Lecture des SMS sur l’ancien appareil</h2>
+
+  <p>
+    Sur l’ancien appareil, l’application peut demander l’autorisation de lire les SMS afin de préparer leur transfert.
+    Cette permission est demandée uniquement si l’utilisateur choisit le module SMS.
+  </p>
+
+  <p>
+    Si l’utilisateur refuse l’autorisation, le module SMS peut être ignoré et les autres modules de transfert
+    peuvent continuer à fonctionner.
+  </p>
+
+  <h2>3. Restauration des SMS sur le nouvel appareil</h2>
+
+  <p>
+    Sur le nouvel appareil, Android peut exiger que l’application devienne temporairement l’application SMS par défaut
+    afin de restaurer les SMS dans l’application Messages du téléphone.
+  </p>
+
+  <p>
+    Dans ce cas, l’application doit expliquer clairement la raison de cette demande avant d’ouvrir l’écran système
+    Android correspondant.
+  </p>
+
+  <ul>
+    <li>L’utilisateur reste libre d’accepter ou de refuser.</li>
+    <li>Le rôle SMS par défaut est demandé uniquement pour la restauration des SMS.</li>
+    <li>Après la restauration, l’application guide l’utilisateur pour remettre son application SMS habituelle.</li>
+    <li>L’application ne doit pas envoyer de SMS automatiquement.</li>
+  </ul>
+
+  <h2>4. MMS</h2>
+
+  <p>
+    Les MMS peuvent contenir des images, pièces jointes et informations dépendantes de l’opérateur ou de l’appareil.
+    Leur transfert peut être limité ou non disponible selon la version de l’application.
+  </p>
+
+  <div class="warning">
+    <p>
+      Si les MMS ne sont pas pris en charge dans une version de l’application, cela doit être indiqué clairement
+      à l’utilisateur. L’application ne doit pas promettre un transfert MMS complet si cette fonctionnalité
+      n’est pas réellement disponible.
+    </p>
+  </div>
+
+  <h2>5. Objectif du module journal d’appels</h2>
+
+  <p>
+    Le module journal d’appels, lorsqu’il est disponible, sert uniquement à transférer l’historique d’appels
+    de l’utilisateur entre ses appareils.
+  </p>
+
+  <ul>
+    <li>Lecture de l’historique d’appels sur l’ancien appareil si l’utilisateur l’autorise ;</li>
+    <li>Transfert local vers le nouvel appareil ;</li>
+    <li>Affichage possible dans une section locale de l’application ;</li>
+    <li>Aucune utilisation de l’historique d’appels pour la publicité ;</li>
+    <li>Aucun envoi de l’historique d’appels vers un serveur externe.</li>
+  </ul>
+
+  <h2>6. Restauration native du journal d’appels</h2>
+
+  <p>
+    Restaurer le journal d’appels directement dans l’application Téléphone native peut nécessiter des permissions
+    et rôles Android très sensibles.
+  </p>
+
+  <p>
+    Si Android exige que l’application devienne temporairement l’application Téléphone par défaut, l’utilisateur
+    doit être informé clairement avant toute demande.
+  </p>
+
+  <p>
+    Si cette restauration native n’est pas disponible ou n’est pas activée, l’application peut proposer une alternative :
+    afficher l’historique d’appels transféré dans une section locale de l’application.
+  </p>
+
+  <h2>7. Appels non passés automatiquement</h2>
+
+  <p>
+    L’application ne doit pas passer d’appel automatiquement.
+    Elle ne doit pas intercepter volontairement les communications de l’utilisateur.
+  </p>
+
+  <p>
+    Le module d’historique d’appels a pour objectif la migration ou l’affichage de données historiques,
+    pas la gestion quotidienne des appels.
+  </p>
+
+  <h2>8. Publicités interdites sur ces écrans</h2>
+
+  <p>
+    Les écrans liés aux SMS et au journal d’appels sont considérés comme sensibles.
+    Aucune publicité ne doit être affichée pendant :
+  </p>
+
+  <ul>
+    <li>les explications SMS ;</li>
+    <li>les explications journal d’appels ;</li>
+    <li>les demandes de permissions SMS ou appels ;</li>
+    <li>le changement temporaire d’application SMS par défaut ;</li>
+    <li>le changement temporaire d’application Téléphone par défaut si ce module existe ;</li>
+    <li>la lecture, le transfert ou la restauration des SMS ;</li>
+    <li>la lecture, le transfert ou l’affichage de l’historique d’appels.</li>
+  </ul>
+
+  <h2>9. Consentement utilisateur</h2>
+
+  <p>
+    Avant toute opération liée aux SMS ou au journal d’appels, l’application doit expliquer :
+  </p>
+
+  <ul>
+    <li>quelle donnée est concernée ;</li>
+    <li>pourquoi la permission est demandée ;</li>
+    <li>comment les données sont transférées ;</li>
+    <li>que les données ne sont pas envoyées à un serveur externe ;</li>
+    <li>que les données ne sont pas utilisées pour la publicité ;</li>
+    <li>que l’utilisateur peut refuser et continuer sans ce module.</li>
+  </ul>
+
+  <h2>10. Liens utiles</h2>
+
+  <ul>
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="privacy-policy.html">Politique de confidentialité</a></li>
+    <li><a href="terms.html">Conditions d’utilisation</a></li>
+    <li><a href="support.html">Support</a></li>
+    <li><a href="data-safety.html">Sécurité des données</a></li>
+    <li><a href="data-deletion.html">Suppression des données</a></li>
+    <li><a href="legal-notice.html">Mentions légales</a></li>
+    <li><a href="android-permissions.html">Permissions Android</a></li>
+    <li><a href="advertising.html">Publicités et consentement</a></li>
+    <li><a href="google-play-permissions.html">Déclaration des permissions sensibles</a></li>
+    <li><a href="app-ads.txt">Fichier app-ads.txt</a></li>
+  </ul>
+
+  <h2>11. Contact</h2>
+
+  <p><strong>Neova Labs / SASU AMINE TELECOM</strong></p>
+  <p><strong>Adresse :</strong> 89B Grande Rue, 59100 Roubaix, France</p>
+  <p><strong>SIREN :</strong> 810 367 110</p>
+  <p><strong>SIRET :</strong> 810 367 110 00014</p>
+  <p><strong>E-mail :</strong> <a href="mailto:dadamine86@gmail.com">dadamine86@gmail.com</a></p>
+
+  <footer>
+    <p>© 2026 Neova Labs / SASU AMINE TELECOM — Transfert Données Téléphone.</p>
+  </footer>
+
+</body>
+</html>
